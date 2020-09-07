@@ -3,3 +3,32 @@
  * API de CONTEXT con REDUCER es un reemplazo de REDUX sin necesidad de instalar nada, ya viene en React.
  * STATE -> van a estar las funciones con dispatch hacia los TYPES
  */
+
+
+/**
+    ----ProyectoState.js-----
+ *  proyectoState -> este va a ser el state inicial de la administracion del proyecto: CRUD
+ * initialState -> cuando hagamos click en boton "nuevo proyecto" aparezca el formulario para agregar nuevo proyecto.
+ *
+ * useReducer(reducer, state inicial) -> reemplazo del reducer de redux.
+ * es similar a useState retorna el state y la funcion de dispatch
+ * dispatch -> para ejecutar las acciones
+ *
+ * prop.children -> los hijos del provider pasen los datos por los diferentes componentes.
+ *
+ * 1) creamos el context, el reducer
+ * 2) agregamos un initialState
+ * 3) extraemos de useReducer : el state y el dispatch
+ * 4) dispatch va a ejecutar los diferentes types,
+ * 5) los ejecutamos en proyectoReducer para modificar el state
+ * 5) consumimos nuestro provider y lo importamos en App.js (componente principal)
+ */
+
+ /**
+ --------App.js-------
+ * Lo que esta en Switch son las diferentes paginas del proyecto.
+ * Lo que esta afuera del Switch se verá en todas las paginas.
+ * proyectos --> el usuario debe estar autenticado y va a ver unicamente sus proyectos.
+ * ProyectoState -> para pasar los state por todos los componentes.
+ *
+ */

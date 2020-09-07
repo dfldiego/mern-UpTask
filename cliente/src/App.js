@@ -20,10 +20,3 @@ function App() {
 }
 
 export default App;
-/**
- * Lo que esta en Switch son las diferentes paginas del proyecto.
- * Lo que esta afuera del Switch se verá en todas las paginas.
- * proyectos --> el usuario debe estar autenticado y va a ver unicamente sus proyectos.
- * ProyectoState -> para pasar los state por todos los componentes.
- *
- */
