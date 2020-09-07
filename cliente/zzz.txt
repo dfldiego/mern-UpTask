@@ -1,0 +1,5 @@
+/**
+ * REDUCER contiene las funciones que van a interactuar con el STATE.
+ * API de CONTEXT con REDUCER es un reemplazo de REDUX sin necesidad de instalar nada, ya viene en React.
+ * STATE -> van a estar las funciones con dispatch hacia los TYPES
+ */
