@@ -1,3 +1,7 @@
+### Dependencias Instaladas.
+
+*react-router-dom -> npm i react-router-dom
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
