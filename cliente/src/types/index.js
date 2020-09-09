@@ -5,6 +5,8 @@ export const VALIDAR_FORMULARIO = 'VALIDAR_FORMULARIO';
 export const PROYECTO_ACTUAL = 'PROYECTO_ACTUAL';
 export const ELIMINAR_PROYECTO = 'ELIMINAR_PROYECTO';
 
+export const TAREAS_PROYECTO = 'TAREAS_PROYECTO';
+
 /**
  * -----types -> index.js--------
  * aqui definimos acciones -> describen lo que va pasando en la app
