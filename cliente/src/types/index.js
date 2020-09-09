@@ -7,6 +7,7 @@ export const ELIMINAR_PROYECTO = 'ELIMINAR_PROYECTO';
 
 export const TAREAS_PROYECTO = 'TAREAS_PROYECTO';
 export const AGREGAR_TAREA = 'AGREGAR_TAREA';
+export const VALIDAR_TAREA = 'VALIDAR_TAREA';
 
 /**
  * -----types -> index.js--------
