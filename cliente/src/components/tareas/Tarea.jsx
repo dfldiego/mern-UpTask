@@ -18,12 +18,23 @@ const Tarea = ({ tarea }) => {
     const {
         obtenerTareas,
         eliminarTarea,
+        cambiarEstadoTarea,
     } = tareasContext;
 
     // funcion que se ejecuta al presionar boton "eliminar tarea"
     const tareaEliminar = id => {
         eliminarTarea(id);
         obtenerTareas(proyectoActual.id);
+    }
+
+    // funcion que modifica el estado de las tareas
+    const cambiarEstado = tarea => {
+        if (tarea.estado) {
+            tarea.estado = false;
+        } else {
+            tarea.estado = true;
+        }
+        cambiarEstadoTarea(tarea);
     }
 
     return (
@@ -37,6 +48,7 @@ const Tarea = ({ tarea }) => {
                             <button
                                 type="button"
                                 className="completo"
+                                onClick={() => cambiarEstado(tarea)}
                             >Completo</button>
                         )
                         :
@@ -44,6 +56,7 @@ const Tarea = ({ tarea }) => {
                             <button
                                 type="button"
                                 className="incompleto"
+                                onClick={() => cambiarEstado(tarea)}
                             >Incompleto</button>
                         )
                     }
