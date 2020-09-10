@@ -19,6 +19,7 @@ const Tarea = ({ tarea }) => {
         obtenerTareas,
         eliminarTarea,
         cambiarEstadoTarea,
+        guardarTareaActual,
     } = tareasContext;
 
     // funcion que se ejecuta al presionar boton "eliminar tarea"
@@ -35,6 +36,11 @@ const Tarea = ({ tarea }) => {
             tarea.estado = true;
         }
         cambiarEstadoTarea(tarea);
+    }
+
+    // Agrega una tarea actual cuando el usuario desea editarla
+    const seleccionarTarea = tarea => {
+        guardarTareaActual(tarea);
     }
 
     return (
@@ -65,6 +71,7 @@ const Tarea = ({ tarea }) => {
                     <button
                         type="button"
                         className="btn btn-primario"
+                        onClick={() => seleccionarTarea(tarea)}
                     >Editar</button>
                     <button
                         type="button"
