@@ -12,6 +12,7 @@ export const ELIMINAR_TAREA = 'ELIMINAR_TAREA';
 export const ESTADO_TAREA = 'ESTADO_TAREA';
 export const TAREA_ACTUAL = 'TAREA_ACTUAL';
 export const ACTUALIZAR_TAREA = 'ACTUALIZAR_TAREA';
+export const LIMPIAR_TAREA = 'LIMPIAR_TAREA';
 
 /**
  * -----types -> index.js--------
