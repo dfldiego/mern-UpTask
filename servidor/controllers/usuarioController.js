@@ -1,0 +1,4 @@
+
+exports.crearUsuario = (req, res) => {
+
+}
