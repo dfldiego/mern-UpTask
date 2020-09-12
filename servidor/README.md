@@ -12,6 +12,8 @@
 
 -EXPRESS VALIDATOR: npm i express-validator
 
+-JSONWEBTOKEN(JWT): npm i jsonwebtoken
+
 
 ### Descripciones
 
