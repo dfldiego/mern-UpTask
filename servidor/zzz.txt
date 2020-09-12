@@ -1,0 +1,7 @@
+req -> request: lo que el usuario envia.
+req.body -> obtengo los datos enviados por el usuario.
+
+express.json() -> tenemos que enviar el header como application/json.
+    en postman -> Headers -> Content-Type(key) y application/json(value)
+                    eso significa que vamos a enviar un json.
+                    el Json se envia en Body -> raw -> codigo json

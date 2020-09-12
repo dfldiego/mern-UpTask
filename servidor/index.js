@@ -7,6 +7,9 @@ const app = express();
 // conectar a la BBDD
 conectarDB();
 
+// habilitar express.json (reemplazo de bodyparser)
+app.use(express.json({ extended: true }));
+
 // puerto de la app
 const PORT = process.env.PORT || 4000;
 
