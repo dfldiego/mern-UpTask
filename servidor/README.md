@@ -10,6 +10,8 @@
 
 -BCRYPTJS: npm i bcryptjs
 
+-EXPRESS VALIDATOR: npm i express-validator
+
 
 ### Descripciones
 
