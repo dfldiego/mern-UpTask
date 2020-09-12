@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+mongoose.set('useCreateIndex', true);
 
 const UsuarioSchema = mongoose.Schema({
     nombre: {
@@ -19,7 +20,7 @@ const UsuarioSchema = mongoose.Schema({
     },
     registro: {
         type: Date,
-        dafault: Data.now()
+        dafault: Date.now()
     }
 });
 
