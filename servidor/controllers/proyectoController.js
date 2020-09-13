@@ -39,7 +39,7 @@ exports.crearProyecto = async (req, res) => {
 // obtiene todos los proyectos del usuario actual
 exports.obtenerProyectos = async (req, res) => {
     try {
-        /* console.log(req.usuario); */
+        console.log(req.usuario);
         const proyectos = await Proyecto.find({ creador: req.usuario.id }).sort({ creado: -1 }); // usuario.id sacado de auth.js luego del jwt
         res.json({ proyectos });
     } catch (error) {
@@ -67,13 +67,22 @@ exports.actualizarProyecto = async (req, res) => {
     try {
 
         // revisar el ID
+        /* console.log(req.params.id); */
+        let proyecto = await Proyecto.findById(req.params.id);
 
         // si el proyecto existe o no
+        if (!proyecto) {
+            return res.status(404).json({ msg: 'Proyecto no encontrado' });
+        }
 
         // verificar el creador del proyecto
+        if (proyecto.creador.toString() !== req.usuario.id) {   //auth.js payload
+            return res.status(401).json({ msg: 'No autorizado' });
+        }
 
         //actualizar el proyecto
-
+        proyecto = await Proyecto.findByIdAndUpdate({ _id: req.params.id }, { $set: nuevoProyecto }, { new: true });
+        res.json({ proyecto });
     } catch (error) {
         console.log(error);
         res.status(500).send('Error en el servidor');
