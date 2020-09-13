@@ -14,9 +14,10 @@ router.post('/',
     proyectoController.crearProyecto
 )
 
+// obtener los proyectos del usuario autenticado.
 router.get('/',
     auth,
-    proyectoController.crearProyecto
+    proyectoController.obtenerProyectos
 )
 
 module.exports = router;

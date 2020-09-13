@@ -27,6 +27,7 @@ exports.crearProyecto = async (req, res) => {
         res.status(500).send('Hubo un error');
     }
 }
+
 /**
  * al enviar un token valido, se guarda la referencia del usuario correctamente y
  * extrae los valores que require del JWT y valida que sea valido el token
@@ -34,3 +35,15 @@ exports.crearProyecto = async (req, res) => {
  * Tenemos la creacion de los proyectos atada al usuario que está autenticado y solamente
  * ese usuario podrá verlo
  */
+
+// obtiene todos los proyectos del usuario actual
+exports.obtenerProyectos = async (req, res) => {
+    try {
+        /* console.log(req.usuario); */
+        const proyectos = await Proyecto.find({ creador: req.usuario.id }).sort({ creado: -1 }); // usuario.id sacado de auth.js luego del jwt
+        res.json({ proyectos });
+    } catch (error) {
+        console.log(error);
+        res.status(500).send('Hubo un error');
+    }
+}
