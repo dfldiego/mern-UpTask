@@ -14,6 +14,9 @@ export const TAREA_ACTUAL = 'TAREA_ACTUAL';
 export const ACTUALIZAR_TAREA = 'ACTUALIZAR_TAREA';
 export const LIMPIAR_TAREA = 'LIMPIAR_TAREA';
 
+export const MOSTRAR_ALERTA = 'MOSTRAR_ALERTA';
+export const OCULTAR_ALERTA = 'OCULTAR_ALERTA';
+
 /**
  * -----types -> index.js--------
  * aqui definimos acciones -> describen lo que va pasando en la app
