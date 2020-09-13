@@ -6,6 +6,9 @@ exports.crearProyecto = async (req, res) => {
         //crear un nuevo proyecto
         const proyecto = new Proyecto(req.body);
 
+        // guardar el creado via JWT -> req.usuario: sacado de middleware/auth.js -> usuario.id: sacado de usuarioController.js del payload.
+        proyecto.creador = req.usuario.id;
+
         // guardamos el proyecto en la BD
         proyecto.save();
 
@@ -17,3 +20,10 @@ exports.crearProyecto = async (req, res) => {
         res.status(500).send('Hubo un error');
     }
 }
+/**
+ * al enviar un token valido, se guarda la referencia del usuario correctamente y
+ * extrae los valores que require del JWT y valida que sea valido el token
+ * y lo va agregando como creador del proyecto.
+ * Tenemos la creacion de los proyectos atada al usuario que está autenticado y solamente
+ * ese usuario podrá verlo
+ */
