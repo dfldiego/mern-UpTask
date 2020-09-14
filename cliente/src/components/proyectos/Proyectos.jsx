@@ -10,7 +10,7 @@ const Proyectos = () => {
     // extraer info de autenticacion
     const authContext = useContext(AuthContext);
     const {
-        usuarioAutenticado
+        usuarioAutenticado,
     } = authContext;
 
     // cargar la info del usuario autenticado
