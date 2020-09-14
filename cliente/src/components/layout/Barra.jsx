@@ -14,6 +14,7 @@ const Barra = () => {
     // cargar la info del usuario autenticado
     useEffect(() => {
         usuarioAutenticado();
+        //eslint-disable-next-line
     }, []);
 
     return (
