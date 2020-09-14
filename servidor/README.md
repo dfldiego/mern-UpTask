@@ -14,6 +14,7 @@
 
 -JSONWEBTOKEN(JWT): npm i jsonwebtoken
 
+-CORS:  npm i cors
 
 ### Descripciones
 
