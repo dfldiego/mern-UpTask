@@ -90,7 +90,7 @@ const AuthState = props => {
             // obtener el usuario
             usuarioAutenticado();
         } catch (error) {
-            console.log(error.response.data.msg);
+            /*  console.log(error.response.data.msg); */
             const alerta = {
                 msg: error.response.data.msg,
                 categoria: 'alerta-error'
@@ -100,6 +100,13 @@ const AuthState = props => {
                 payload: alerta
             })
         }
+    }
+
+    // cierra la sesion del usuario
+    const cerrarSesion = () => {
+        dispatch({
+            type: CERRAR_SESION
+        })
     }
 
     return (
@@ -112,6 +119,7 @@ const AuthState = props => {
                 registrarUsuario,
                 iniciarSesion,
                 usuarioAutenticado,
+                cerrarSesion,
             }}
         >
             {props.children}

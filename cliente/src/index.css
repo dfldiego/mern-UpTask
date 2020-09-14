@@ -175,7 +175,8 @@ aside {
   font-weight: 900;
 }
 
-.nav-principal a {
+.nav-principal a,
+.nav-principal button {
   color: var(--blanco);
   text-decoration: none;
 }

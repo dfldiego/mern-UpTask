@@ -8,6 +8,7 @@ const Barra = () => {
     const {
         usuario,
         usuarioAutenticado,
+        cerrarSesion,
     } = authContext;
 
     // cargar la info del usuario autenticado
@@ -19,7 +20,10 @@ const Barra = () => {
         <header className="app-header">
             {usuario ? <p className="nombre-usuario">Hola <span>{usuario.nombre}</span></p> : null}
             <nav className="nav-principal">
-                <a href="#!">Cerrar Sesión</a>
+                <button
+                    className="btn btn-blank cerrar-sesion"
+                    onClick={cerrarSesion}
+                >Cerrar Sesión</button>
             </nav>
         </header>
     )
