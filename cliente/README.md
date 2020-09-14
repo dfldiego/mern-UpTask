@@ -3,6 +3,7 @@
 *react-router-dom -> npm i react-router-dom
 *uuid -> npm i -D uuid
 *react-transition-group -> npm i react-transition-group
+*axios -> npm i axios
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
